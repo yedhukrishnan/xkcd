@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_comic"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cryptohacker.xkcd.ComicActivity">
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/comic_image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/technically"
+        android:scaleType="fitCenter"
+        android:onClick="showAltText"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_comic"
+        app:layout_constraintTop_toTopOf="@+id/activity_comic"
+        app:layout_constraintRight_toRightOf="@+id/activity_comic"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_comic" />
+
+    <Button
+        android:text="&lt;"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:id="@+id/button_previous"
+        android:onClick="previousComic"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_comic"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_comic" />
+
+    <Button
+        android:text="&gt;"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:id="@+id/button_next"
+        android:onClick="nextComic"
+        app:layout_constraintRight_toRightOf="@+id/activity_comic"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_comic" />
+
+</android.support.constraint.ConstraintLayout>
